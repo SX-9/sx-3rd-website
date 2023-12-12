@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+div.card {
+  @apply border border-cyan-900 rounded-lg p-4 hover:border-cyan-100 h-fit;
+}
+
+a {
+  @apply text-blue-500 underline hover:text-blue-200;
+}
+
+h1 {
+  @apply text-xl font-bold;
+}
