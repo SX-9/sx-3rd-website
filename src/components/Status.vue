@@ -62,7 +62,7 @@ export default {
         <h1><i class="fa-brands fa-discord"></i> Status</h1>
         <div class="p-2">
             <div class="flex gap-2 h-12">
-                <img v-if="user.data.discord_user.avatar" :src="`https://cdn.discordapp.com/avatars/${user.data.discord_user.id}/${user.data.discord_user.avatar}.png?size=128`" class="rounded-full h-full">
+                <img v-if="user.data.discord_user.avatar" :src="`https://cdn.discordapp.com/avatars/${user.data.discord_user.id}/${user.data.discord_user.avatar}.png?size=128`" class="border border-white border-solid rounded-full h-full">
                 <div>
                     <h2 class="text-lg font-bold">{{ user.data.discord_user.username }}</h2>
                     <p v-if="user.data.discord_status === 'offline'" class="animate-pulse text-md text-gray-400"><i class="fa-solid fa-circle"></i> Offline</p>
