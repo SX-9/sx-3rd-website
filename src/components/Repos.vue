@@ -10,7 +10,7 @@ async function getGitHubRepositories(username, limit) {
     const nonForkedRepositories = repositories.filter(repo => !repo.fork).slice(0, limit);
     
     const repositoriesInfo = nonForkedRepositories.map(repo => ({
-      name: repo.name,
+      name: username + '/' + repo.name,
       description: repo.description,
       link: repo.html_url,
       stars: repo.stargazers_count
@@ -48,14 +48,15 @@ export default {
     <div class="card">
         <h1><i class="fa-brands fa-github"></i> Repositories</h1>
         <div class="flex flex-col gap-2 p-2">
-            <div v-for="repo in repositories">
+            <div v-for="(repo, i) in repositories">
+                <hr size="1" class="pb-2 border-gray-500" v-if="i">
                 <div class="flex flex-row justify-between items-center">
-                    <h2 class="text-xl"><a :href="repo.link">{{ repo.name }}</a></h2>
+                    <h2 class="text-xl"><a target="_blank" :href="repo.link">{{ repo.name }}</a></h2>
                     <p class="text-yellow-300"><i class="fa-solid fa-star"></i> {{ repo.stars }}</p>
                 </div>
-                <p class="text-gray-400">{{ repo.description || "No Description" }}</p>
+                <p class="text-gray-400"><i class="fa-solid fa-arrow-right"></i> {{ repo.description || "No Description" }}</p>
             </div>
         </div>
-        <a href="https://github.com/SX-9?tab=repositories">More...</a>
+        <a target="_blank" href="https://github.com/SX-9?tab=repositories">More...</a>
     </div>
 </template>

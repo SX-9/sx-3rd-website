@@ -6,4 +6,3 @@ export default defineConfig({
   base: '/sx-3rd-website/',
   plugins: [vue()],
 })
-

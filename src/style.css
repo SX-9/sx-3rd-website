@@ -10,6 +10,10 @@ a {
   @apply text-blue-500 underline hover:text-blue-200;
 }
 
+i {
+  @apply hover:rotate-12;
+}
+
 h1 {
   @apply text-xl font-bold;
 }
