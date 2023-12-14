@@ -2,8 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-.b4 {
+div.b4 {
   @apply transition-all duration-200 ease-in-out opacity-0 translate-y-full;
+}
+
+div.container {
+  @apply ml-5 mt-1;
 }
 
 div.card {
@@ -24,8 +28,4 @@ a {
 
 h1 {
   @apply text-xl font-bold;
-}
-
-li {
-  @apply list-disc list-inside;
 }

@@ -13,7 +13,8 @@ async function getGitHubRepositories(username, limit) {
       name: username + '/' + repo.name,
       description: repo.description,
       link: repo.html_url,
-      stars: repo.stargazers_count
+      stars: repo.stargazers_count,
+      lang: repo.language
     }));
 
     repositoriesInfo.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
@@ -33,7 +34,8 @@ export default {
                     name: "Loading...",
                     description: "Fetching data...",
                     link: "javascript:void(0)",
-                    stars: Infinity
+                    stars: Infinity,
+                    lang: 'Unknown'
                 }
             ]
         };

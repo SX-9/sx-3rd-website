@@ -17,7 +17,7 @@ export default {
     b4s.forEach((b4, i) => {
       setTimeout(() => {
         b4.classList.remove('b4');
-      }, (i+1) * 200);
+      }, i * 200);
     });
   },
 };
