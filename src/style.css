@@ -11,7 +11,7 @@ div.card {
 }
 
 i.skill {
-  @apply text-5xl text-center text-gray-300;
+  @apply text-5xl text-center text-gray-300 hover:scale-75;
 }
 
 i {

@@ -11,7 +11,6 @@ import Skills from "./components/Skills.vue";
 </script>
 
 <script>
-// do something if all components done loading
 export default {
   mounted() {
     let b4s = document.querySelectorAll('.b4');
