@@ -22,6 +22,10 @@ i {
   @apply hover:rotate-12 transition-all duration-200 ease-in-out;
 }
 
+summary {
+  @apply text-gray-400 hover:underline cursor-pointer;
+}
+
 a {
   @apply text-blue-500 underline hover:text-blue-200 transition-all duration-500 ease-in-out;
 }
