@@ -45,7 +45,7 @@ export default {
 </script>
 
 <template>
-    <div class="card">
+    <div class="card b4">
         <h1><i class="fa-brands fa-github"></i> Repositories</h1>
         <div class="flex flex-col gap-2 p-2">
             <div v-for="(repo, i) in repositories">

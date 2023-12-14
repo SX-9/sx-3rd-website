@@ -58,7 +58,7 @@ export default {
 </script>
 
 <template>
-    <div class="card">
+    <div class="card b4">
         <h1><i class="fa-brands fa-discord"></i> Status</h1>
         <div class="p-2">
             <div class="flex gap-2 h-12">
