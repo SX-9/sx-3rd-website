@@ -71,23 +71,25 @@ export default {
                     <p v-if="user.data.discord_status === 'idle'" class="animate-pulse text-md text-yellow-400"><i class="fa-solid fa-circle"></i> Idle</p>
                 </div>
             </div>
-            <details v-if="user.data.spotify" class="mt-3 ml-2">
-                <summary class="text-md text-gray-400 hover:underline">Listening to <span class="font-bold">{{ user.data.spotify.song }}</span> by <span class="font-bold">{{ user.data.spotify.artist }}</span></summary>
-                <div class="flex gap-2 h-12 mt-1">
-                    <img :src="user.data.spotify.album_art_url" class="rounded-md h-full">
-                    <div>
-                        <h2 class="text-lg font-bold"><a target="_blank" :href="'https://open.spotify.com/intl-id/track/' + user.data.spotify.track_id">{{ user.data.spotify.song }}</a></h2>
-                        <p class="text-md text-gray-400"><i class="fa-solid fa-music"></i> {{ user.data.spotify.artist }}</p>
-                    </div>
-                </div>
-            </details>
             <div class="p-2 gap-3 flex flex-col">
-                <div v-for="activity in user.data.activities.filter(a=>a.type===0)">
-                    <p class="text-md text-gray-400">Playing <span class="font-bold">{{ activity.name }}</span></p>
-                    <p class="text-md text-gray-400 pl-4">Started <span class="font-bold">{{ timeAgo(activity.created_at) }}</span></p>
-                    <p class="text-md text-gray-400 pl-4">{{ activity.state }}</p>
-                    <p class="text-md text-gray-400 pl-4">{{ activity.details }}</p>
-                </div>
+                <details v-if="user.data.spotify" open>
+                    <summary class="text-md text-gray-400 hover:underline">Listening to <span class="font-bold">{{ user.data.spotify.song }}</span></summary>
+                    <div class="flex gap-2 h-12 mt-1 container">
+                        <img :src="user.data.spotify.album_art_url" class="rounded-md h-full">
+                        <div>
+                            <h2 class="text-lg font-bold"><a target="_blank" :href="'https://open.spotify.com/intl-id/track/' + user.data.spotify.track_id">{{ user.data.spotify.song }}</a></h2>
+                            <p class="text-md text-gray-400"><i class="fa-solid fa-music"></i> {{ user.data.spotify.artist }}</p>
+                        </div>
+                    </div>
+                </details>
+                <details v-for="activity in user.data.activities.filter(a=>a.type===0)">
+                    <summary class="text-md text-gray-400">Playing <span class="font-bold">{{ activity.name }}</span></summary>
+                    <div class="container">
+                        <p class="text-md text-gray-400">Started <span class="font-bold">{{ timeAgo(activity.created_at) }}</span></p>
+                        <p class="text-md text-gray-400">{{ activity.state }}</p>
+                        <p class="text-md text-gray-400">{{ activity.details }}</p>
+                    </div>
+                </details>
             </div>
         </div>
     </div>
