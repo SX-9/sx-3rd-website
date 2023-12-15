@@ -62,7 +62,7 @@ export default {
         <h1><i class="fa-brands fa-discord"></i> Status</h1>
         <div class="p-2">
             <div class="flex gap-2 h-12">
-                <img v-if="user.data.discord_user.avatar" :src="`https://cdn.discordapp.com/avatars/${user.data.discord_user.id}/${user.data.discord_user.avatar}.png?size=128`" class="border border-white border-solid rounded-full h-full">
+                <img v-if="user.data.discord_user.avatar" :src="`https://cdn.discordapp.com/avatars/${user.data.discord_user.id}/${user.data.discord_user.avatar}.png?size=128`" class="border border-white border-solid rounded-full h-12">
                 <div>
                     <h2 class="text-lg font-bold">{{ user.data.discord_user.username }}</h2>
                     <p v-if="user.data.discord_status === 'offline'" class="animate-pulse text-md text-gray-400"><i class="fa-solid fa-circle"></i> Offline</p>
@@ -73,9 +73,9 @@ export default {
             </div>
             <div class="p-2 gap-3 flex flex-col">
                 <details v-if="user.data.spotify" open>
-                    <summary>Listening to <span class="font-bold">{{ user.data.spotify.song }}</span></summary>
-                    <div class="flex gap-2 h-12 mt-1 container">
-                        <img :src="user.data.spotify.album_art_url" class="rounded-md h-full">
+                    <summary>Listening to <span class="font-bold">Spotify</span></summary>
+                    <div class="flex gap-2 mt-1 container">
+                        <img :src="user.data.spotify.album_art_url" class="rounded-md h-14">
                         <div>
                             <h2 class="text-lg font-bold"><a target="_blank" :href="'https://open.spotify.com/intl-id/track/' + user.data.spotify.track_id">{{ user.data.spotify.song }}</a></h2>
                             <p class="text-md text-gray-400"><i class="fa-solid fa-music"></i> {{ user.data.spotify.artist }}</p>

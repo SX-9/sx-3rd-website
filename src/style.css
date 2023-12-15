@@ -18,6 +18,10 @@ i.skill {
   @apply text-5xl text-center text-gray-300 hover:scale-75;
 }
 
+canvas {
+  @apply absolute -z-10;
+}
+
 i {
   @apply hover:rotate-12 transition-all duration-200 ease-in-out;
 }

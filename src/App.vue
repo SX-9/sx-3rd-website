@@ -20,6 +20,17 @@ export default {
       }, i * 200);
     });
   },
+  created() {
+    this.emitter.on('birthday', () => {
+      this.$confetti.update({
+        particlesPerFrame: 1,
+      });
+      this.$confetti.start();
+      setTimeout(() => {
+        this.$confetti.stop();
+      }, window.innerHeight * 5);
+    });
+  }
 };
 </script>
 

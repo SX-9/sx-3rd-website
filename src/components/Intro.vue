@@ -1,4 +1,5 @@
 <script>
+
 export default {
   data() {
     return {
@@ -14,6 +15,11 @@ export default {
       today.setHours(0, 0, 0, 0);
       if (today > next) next.setFullYear(y + 1);
       return Math.round((next - today) / 8.64e7);
+    }
+  },
+  mounted() {
+    if (this.days === 0) {
+      this.emitter.emit('birthday');
     }
   },
 }
