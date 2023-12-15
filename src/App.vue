@@ -42,6 +42,7 @@ export default {
     <div class="flex flex-col sm:flex-row-reverse sm:gap-8 justify-center items-center">
       <p class="text-gray-400 text-center m-2">Its <span class="font-bold">{{ new Date().toLocaleString('en-US', { timeZone: 'Asia/Jakarta' }).split(' ').filter(i=>!i.includes('/')).join(' ') }}</span> in Asia/Jakarta.</p>
       <div class="flex gap-4">
+        <a target="_blank" href="https://github.com/SX-9/sx-3rd-website"><i class="fa-solid fa-code"></i></a>
         <a target="_blank" href="mailto:hello@mail.sx9.is-a.dev"><i class="fa-solid fa-envelope-circle-check"></i></a>
         <a target="_blank" href="https://github.com/SX-9"><i class="fa-brands fa-github"></i></a>
         <a target="_blank" href="https://discord.com/users/882595027132493864"><i class="fa-brands fa-discord"></i></a>
