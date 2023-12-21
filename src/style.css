@@ -30,7 +30,7 @@ summary {
   @apply text-gray-400 hover:underline cursor-pointer;
 }
 
-a {
+a:not(.nostyle) {
   @apply text-blue-500 underline hover:text-blue-200 transition-all duration-500 ease-in-out;
 }
 
