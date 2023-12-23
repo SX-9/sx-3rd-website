@@ -38,12 +38,12 @@ export default {
 <template>
   <Gaza />
   <div class="flex justify-center items-center flex-col p-12 pb-8">
-    <h1 class="text-cyan-100 text-xl text-center b4">
+    <h1 class="text-cyan-100 text-xl text-center">
       Welcome to my little corner of the internet!
     </h1>
     <div class="flex flex-col sm:flex-row-reverse sm:gap-8 justify-center items-center m-2">
-      <p class="text-gray-400 text-center b4">Its <span class="font-bold">{{ new Date().toLocaleString('en-US', { timeZone: 'Asia/Jakarta' }).split(' ').filter(i=>!i.includes('/')).join(' ') }}</span> in Asia/Jakarta.</p>
-      <div class="flex gap-4 b4">
+      <p class="text-gray-400 text-center">Its <span class="font-bold">{{ new Date().toLocaleString('en-US', { timeZone: 'Asia/Jakarta' }).split(' ').filter(i=>!i.includes('/')).join(' ') }}</span> in Asia/Jakarta.</p>
+      <div class="flex gap-4">
         <a target="_blank" href="https://github.com/SX-9/sx-3rd-website"><i class="fa-solid fa-code"></i></a>
         <a target="_blank" href="mailto:hello@mail.sx9.is-a.dev"><i class="fa-solid fa-envelope"></i></a>
         <a target="_blank" href="https://github.com/SX-9"><i class="fa-brands fa-github"></i></a>
