@@ -2,7 +2,7 @@
 export default {
   data() {
     return {
-      title: "Free Palestine 🇵🇸",
+      title: "Free Palestine",
       description: "Stand for humanity! Palestine has a right to defend itself. Together, we can put an end to the Gaza genocide. Let's unite to #SAVEGAZA.",
       linkTo: "https://donate.unrwa.org/",
     }
@@ -12,7 +12,7 @@ export default {
 
 <template>
   <div
-      class="top-0 isolate z-50 flex items-center overflow-hidden px-3.5 py-2.5 backdrop-blur-sm  md:px-6 bg-gray-600/70"
+      class="sticky lg:relative top-0 isolate z-50 flex items-center overflow-hidden px-3.5 py-2.5 backdrop-blur-sm  md:px-6 bg-gray-600/70"
     >
       <div
         class="absolute left-[max(-7rem,calc(50%-52rem))] top-1/2 -z-10 -translate-y-1/2 blur-2xl"
@@ -36,15 +36,18 @@ export default {
         }"
       />
       </div>
-      <p
-        class="mx-auto text-sm leading-4 sm:leading-6 text-gray-300 text-center"
-      >
-        <a :href="linkTo" target="_blank" class="nostyle">
-          <strong className="font-semibold">{{title}}</strong>
-          <br>
-          {{description}}
-        </a>
-      </p>
+      <div class="mx-4 gap-4 flex justify-between items-center w-full h-full text-gray-300">
+        <p
+          class="text-sm leading-4 sm:leading-6"
+        >
+          <a :href="linkTo" target="_blank" class="nostyle">
+            <strong className="font-semibold">{{title}}</strong>
+            <br>
+            {{description}}
+          </a>
+        </p>
+        <i class="fa-solid fa-x text-lg" @click="this.$el.remove()"></i>
+      </div>
     </div>
 </template>
 

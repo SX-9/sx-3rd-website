@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-div.b4 {
+.b4 {
   @apply transition-all duration-200 ease-in-out opacity-0 translate-y-full;
 }
 
