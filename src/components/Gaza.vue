@@ -1,4 +1,5 @@
 <script>
+// Credits: https://github.com/Safouene1/support-palestine-banner
 export default {
   data() {
     return {
