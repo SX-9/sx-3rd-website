@@ -32,7 +32,7 @@ jobs:
         with:
           path: './dist'
           file: 'CNAME'
-          content: new.sx9.is-a.dev
+          content: satr14.is-a.dev
 
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v2
