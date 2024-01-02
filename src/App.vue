@@ -9,6 +9,7 @@ import Repos from "./components/Repos.vue";
 import Status from "./components/Status.vue";
 import Skills from "./components/Skills.vue";
 import Gaza from "./components/Gaza.vue";
+import Server from "./components/Server.vue";
 </script>
 
 <script>
@@ -56,5 +57,6 @@ export default {
     <Skills />
     <Repos />
     <Status />
+    <Server />
   </div>
 </template>
