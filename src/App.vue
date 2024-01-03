@@ -59,7 +59,8 @@ export default {
     <Repos />
     <Status />
     <Server />
-    <Misc />
+    <Links />
+    <Repos />
   </div>
   <p class="m-8 text-center text-gray-400">
     	&#169; {{ new Date().getFullYear() }} Satria - All Rights Reserved
