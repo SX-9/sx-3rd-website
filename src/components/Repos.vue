@@ -39,7 +39,7 @@ export default {
         };
     },
     async created() {
-        this.repositories = await getGitHubRepositories("SX-9", 5);
+        this.repositories = await getGitHubRepositories("SX-9", 6);
     }
 };
 </script>
