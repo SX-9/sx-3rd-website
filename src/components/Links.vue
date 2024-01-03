@@ -23,7 +23,10 @@ export default {
           name: 'DVD Logo Bounce',
           url: 'https://sx-9.github.io/dvd-bounce/',
         },
-        
+        {
+          name: 'X! (X Bang) Programming Language',
+          url: 'https://sx-9.github.io/xbang-lang/',
+        },
       ]
     }
   }
