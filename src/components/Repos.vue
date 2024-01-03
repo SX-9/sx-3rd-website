@@ -54,7 +54,8 @@ export default {
                     <h2 class="text-xl"><a target="_blank" :href="repo.link">{{ repo.name }}</a></h2>
                     <p class="text-yellow-300"><i class="fa-solid fa-star"></i> {{ repo.stars }}</p>
                 </div>
-                <p class="text-gray-400"><i class="fa-solid fa-arrow-right"></i> {{ repo.description || "No Description" }}</p>
+                <p class="text-gray-400" v-if="repo.description">{{ repo.description }}</p>
+                <p class="text-gray-500 italic" v-else>No Description</p>
             </div>
         </div>
         <a target="_blank" href="https://github.com/SX-9?tab=repositories">More...</a>
