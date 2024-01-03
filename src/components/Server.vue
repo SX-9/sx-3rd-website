@@ -67,13 +67,13 @@ export default {
     <div class="p-2 gap-2">
       <p v-if="!uptime" class="text-red-400 animate-pulse cursor-pointer" @click="start"><i class="fa-solid fa-circle"></i> Offline ({{ msg }})</p>
       <p v-else class="text-green-400 animate-pulse"><i class="fa-solid fa-circle"></i> {{ formatTime(uptime) }}</p>
-      <details>
-        <summary class="ml-1 text-gray-400">{{ model }}</summary>
-        <div class="ml-5">
-          <p class="text-gray-400">{{ cpu.model }}</p>
-          <p class="text-gray-400">{{ ram.total }} GB of RAM</p>
-        </div>
-      </details>
+      <div>
+        <p class="text-gray-400">{{ model }}</p>
+        <ul>
+          <li>{{ cpu.model }}</li>
+          <li>{{ ram.total }} GB of RAM</li>
+        </ul>
+      </div>
       <hr class="my-2" size="1">
       <div class="grid grid-cols-2 gap-2 justify-evenly">
         <div class="flex flex-col items-center">

@@ -72,8 +72,8 @@ export default {
                 </div>
             </div>
             <div class="p-2 gap-3 flex flex-col">
-                <details v-if="user.data.spotify" open>
-                    <summary>Listening to <span class="font-bold">Spotify</span></summary>
+                <div v-if="user.data.spotify">
+                    <p class="text-gray-400">Listening to <span class="font-bold">Spotify</span></p>
                     <div class="flex gap-2 mt-1 container">
                         <img :src="user.data.spotify.album_art_url" class="rounded-md h-14">
                         <div>
@@ -81,15 +81,15 @@ export default {
                             <p class="text-md text-gray-400"><i class="fa-solid fa-music"></i> {{ user.data.spotify.artist }}</p>
                         </div>
                     </div>
-                </details>
-                <details v-for="activity in user.data.activities.filter(a=>a.type===0)">
-                    <summary>Playing <span class="font-bold">{{ activity.name }}</span></summary>
-                    <div class="container">
-                        <p class="text-md text-gray-400">Started <span class="font-bold">{{ timeAgo(activity.created_at) }}</span></p>
-                        <p class="text-md text-gray-400">{{ activity.state }}</p>
-                        <p class="text-md text-gray-400">{{ activity.details }}</p>
-                    </div>
-                </details>
+                </div>
+                <div v-for="activity in user.data.activities.filter(a=>a.type===0)">
+                    <p class="text-gray-400">Playing <span class="font-bold">{{ activity.name }}</span></p>
+                    <ul class="container">
+                        <li>Started <span class="font-bold">{{ timeAgo(activity.created_at) }}</span></li>
+                        <li>{{ activity.state }}</li>
+                        <li>{{ activity.details }}</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
