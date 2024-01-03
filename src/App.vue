@@ -11,6 +11,7 @@ import Skills from "./components/Skills.vue";
 import Gaza from "./components/Gaza.vue";
 import Server from "./components/Server.vue";
 import Misc from "./components/Misc.vue";
+import Links from "./components/Links.vue";
 </script>
 
 <script>
@@ -53,10 +54,10 @@ export default {
       </div>
     </div>
   </div>
-  <div class="grid p-4 gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+  <div class="p-4 columns-1 sm:columns-2 lg:columns-3 xl:columns-4">
     <Intro />
+    <Misc />
     <Skills />
-    <Repos />
     <Status />
     <Server />
     <Links />

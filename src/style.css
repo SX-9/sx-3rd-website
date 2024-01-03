@@ -6,16 +6,21 @@
   @apply transition-all duration-200 ease-in-out opacity-0 translate-y-full;
 }
 
+i.skill {
+  @apply text-5xl text-center text-gray-300 hover:scale-75;
+}
+
 div.container {
   @apply ml-5 mt-1;
 }
 
 div.card {
-  @apply border border-cyan-900 rounded-lg p-4 hover:border-cyan-400 h-fit bg-slate-900 transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-gray-700;
+  @apply inline-block w-full mb-4 border rounded-lg p-4 h-fit transition-all duration-300 ease-in-out hover:shadow-lg;
+  @apply border-cyan-900 hover:border-cyan-400 bg-slate-900 hover:shadow-gray-700
 }
 
-i.skill {
-  @apply text-5xl text-center text-gray-300 hover:scale-75;
+body {
+  @apply bg-slate-950 text-white
 }
 
 canvas {
@@ -26,14 +31,18 @@ i {
   @apply hover:rotate-12 transition-all duration-200 ease-in-out;
 }
 
-summary {
-  @apply text-gray-400 hover:underline cursor-pointer;
-}
-
 a:not(.nostyle) {
   @apply text-blue-500 underline hover:text-blue-200 transition-all duration-500 ease-in-out;
 }
 
 h1 {
   @apply text-xl font-bold;
+}
+
+ul {
+  @apply list-disc ml-5;
+}
+
+li {
+  @apply text-gray-400;
 }
