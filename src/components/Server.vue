@@ -77,18 +77,18 @@ export default {
       <hr class="my-2" size="1">
       <div class="grid grid-cols-2 gap-2 justify-evenly">
         <div class="flex flex-col items-center">
-          <p class="text-gray-400">CPU</p>
-          <h1 v-if="!cpu.usage" class="text-gray-400">{{ cpu.usage }}%</h1>
-          <h1 v-else-if="cpu.usage < 75" class="text-green-400">{{ cpu.usage }}%</h1>
-          <h1 v-else-if="cpu.usage < 90" class="text-yellow-400">{{ cpu.usage }}%</h1>
-          <h1 v-else class="text-red-400">{{ cpu.usage }}%</h1>
+          <p class="text-sm text-gray-400">CPU</p>
+          <h1 v-if="!cpu.usage" class="text-2xl text-gray-400">{{ cpu.usage }}%</h1>
+          <h1 v-else-if="cpu.usage < 75" class="text-2xl text-green-400">{{ cpu.usage }}%</h1>
+          <h1 v-else-if="cpu.usage < 90" class="text-2xl text-yellow-400">{{ cpu.usage }}%</h1>
+          <h1 v-else class="text-2xl text-red-400">{{ cpu.usage }}%</h1>
         </div>
         <div class="flex flex-col items-center">
-          <p class="text-gray-400">RAM</p>
-          <h1 v-if="!ram.usage" class="text-gray-400">{{ ram.usage }}%</h1>
-          <h1 v-else-if="ram.usage < 80" class="text-green-400">{{ ram.usage }}%</h1>
-          <h1 v-else-if="ram.usage < 90" class="text-yellow-400">{{ ram.usage }}%</h1>
-          <h1 v-else class="text-red-400">{{ ram.usage }} %</h1>
+          <p class="text-sm text-gray-400">RAM</p>
+          <h1 v-if="!ram.usage" class="text-2xl text-gray-400">{{ ram.usage }}%</h1>
+          <h1 v-else-if="ram.usage < 80" class="text-2xl text-green-400">{{ ram.usage }}%</h1>
+          <h1 v-else-if="ram.usage < 90" class="text-2xl text-yellow-400">{{ ram.usage }}%</h1>
+          <h1 v-else class="text-2xl text-red-400">{{ ram.usage }} %</h1>
         </div>
       </div>
     </div>
