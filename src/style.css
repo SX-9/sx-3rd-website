@@ -27,6 +27,10 @@ div.card {
   @apply border-surface1 hover:border-surface2 bg-base hover:shadow-surface0;
 }
 
+div.card * {
+  @apply transition-none;
+}
+
 body {
   @apply text-text bg-gradient-to-br from-crust to-mantle;
 }

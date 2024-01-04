@@ -22,6 +22,9 @@ export default {
     }
   },
   mounted() {
+    // set theme
+    const theme = localStorage.getItem("theme");
+    if (theme) this.switchTheme(theme);
     let b4s = document.querySelectorAll('.b4');
     b4s.forEach((b4, i) => {
       setTimeout(() => {
@@ -39,7 +42,17 @@ export default {
         this.$confetti.stop();
       }, window.innerHeight * 5);
     });
-  }
+  },
+  methods: {
+    switchTheme(theme) {
+      const themes = ['mocha', 'macchiato', 'frappe', 'latte'];
+      if (!theme) theme = prompt('Enter theme name:\n' + themes.join(', ')).toLowerCase();
+      if (!themes.includes(theme)) return;
+      document.body.classList.remove(...themes);
+      document.body.classList.add(theme);
+      localStorage.setItem("theme", theme);
+    },
+  },
 };
 </script>
 
@@ -55,6 +68,7 @@ export default {
       <a target="_blank" href="https://github.com/SX-9"><i class="fa-brands fa-github"></i></a>
       <a target="_blank" href="https://discord.com/users/882595027132493864"><i class="fa-brands fa-discord"></i></a>
       <a target="_blank" href="https://donate.unrwa.org/"><i class="fa-solid fa-hand-holding-dollar"></i></a>
+      <a><i @click="switchTheme()" class="fa-solid fa-paint-roller"></i></a>
     </div>
   </div>
   <div class="p-4 columns-1 sm:columns-2 lg:columns-3 xl:columns-4">
