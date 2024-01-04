@@ -7,6 +7,12 @@ export default {
       description: "Stand for humanity! Palestine has a right to defend itself. Together, we can put an end to the Gaza genocide. Let's unite to #SAVEGAZA.",
       linkTo: "https://donate.unrwa.org/",
     }
+  },
+  methods: {
+    hideBanner() {
+      localStorage.setItem('hideBanner', true);
+      this.$el.remove();
+    }
   }
 }
 </script>
@@ -47,7 +53,7 @@ export default {
             {{description}}
           </a>
         </p>
-        <i class="fa-solid fa-x text-lg" @click="this.$el.remove()"></i>
+        <i class="fa-solid fa-x text-lg" @click="hideBanner"></i>
       </div>
     </div>
 </template>

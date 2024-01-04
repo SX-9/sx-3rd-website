@@ -16,6 +16,11 @@ import Links from "./components/Links.vue";
 
 <script>
 export default {
+  data() {
+    return {
+      hideBanner: localStorage?.hideBanner,
+    }
+  },
   mounted() {
     let b4s = document.querySelectorAll('.b4');
     b4s.forEach((b4, i) => {
@@ -39,7 +44,7 @@ export default {
 </script>
 
 <template>
-  <Gaza />
+  <Gaza v-if="!hideBanner" />
   <div class="flex justify-center items-center flex-col p-12 pb-8">
     <h1 class="text-cyan-100 text-xl text-center">
       Welcome to my little corner of the internet!
