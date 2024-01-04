@@ -49,15 +49,12 @@ export default {
     <h1 class="text-cyan-100 text-xl text-center">
       Welcome to my little corner of the internet!
     </h1>
-    <div class="flex flex-col sm:flex-row-reverse sm:gap-8 justify-center items-center m-2">
-      <p class="text-gray-400 text-center">Come and look around!</p>
-      <div class="flex gap-4">
-        <a target="_blank" href="https://github.com/SX-9/sx-3rd-website"><i class="fa-solid fa-code"></i></a>
-        <a target="_blank" href="mailto:hello@mail.sx9.is-a.dev"><i class="fa-solid fa-envelope"></i></a>
-        <a target="_blank" href="https://github.com/SX-9"><i class="fa-brands fa-github"></i></a>
-        <a target="_blank" href="https://discord.com/users/882595027132493864"><i class="fa-brands fa-discord"></i></a>
-        <a target="_blank" href="https://donate.unrwa.org/"><i class="fa-solid fa-hand-holding-dollar"></i></a>
-      </div>
+    <div class="flex gap-4 mt-2">
+      <a target="_blank" href="https://github.com/SX-9/sx-3rd-website"><i class="fa-solid fa-code"></i></a>
+      <a target="_blank" href="mailto:hello@mail.sx9.is-a.dev"><i class="fa-solid fa-envelope"></i></a>
+      <a target="_blank" href="https://github.com/SX-9"><i class="fa-brands fa-github"></i></a>
+      <a target="_blank" href="https://discord.com/users/882595027132493864"><i class="fa-brands fa-discord"></i></a>
+      <a target="_blank" href="https://donate.unrwa.org/"><i class="fa-solid fa-hand-holding-dollar"></i></a>
     </div>
   </div>
   <div class="p-4 columns-1 sm:columns-2 lg:columns-3 xl:columns-4">
