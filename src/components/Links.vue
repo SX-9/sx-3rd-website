@@ -24,7 +24,7 @@ export default {
           url: 'https://sx-9.github.io/dvd-bounce/',
         },
         {
-          name: 'X! (X Bang) Programming Language',
+          name: 'X! Programming Language',
           url: 'https://sx-9.github.io/xbang-lang/',
         },
       ]
