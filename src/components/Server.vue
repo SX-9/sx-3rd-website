@@ -65,30 +65,30 @@ export default {
   <div class="card b4">
     <h1><i class="fa-solid fa-chart-line"></i> Server</h1>
     <div class="p-2 gap-2">
-      <p v-if="!uptime" class="text-red-400 animate-pulse cursor-pointer" @click="start"><i class="fa-solid fa-circle"></i> Offline ({{ msg }})</p>
-      <p v-else class="text-green-400 animate-pulse"><i class="fa-solid fa-circle"></i> {{ formatTime(uptime) }}</p>
+      <p v-if="!uptime" class="text-red animate-pulse cursor-pointer" @click="start"><i class="fa-solid fa-circle"></i> Offline ({{ msg }})</p>
+      <p v-else class="text-green animate-pulse"><i class="fa-solid fa-circle"></i> {{ formatTime(uptime) }}</p>
       <div>
-        <p class="text-gray-400">{{ model }}</p>
+        <p class="text-subtext1">{{ model }}</p>
         <ul>
           <li>{{ cpu.model }}</li>
           <li>{{ ram.total }} GB of RAM</li>
         </ul>
       </div>
-      <hr class="my-2" size="1">
+      <hr class="my-2 border-subtext0" size="1">
       <div class="grid grid-cols-2 gap-2 justify-evenly">
         <div class="flex flex-col items-center">
-          <p class="text-sm text-gray-400">CPU</p>
-          <h1 v-if="!cpu.usage" class="text-2xl text-gray-400">{{ cpu.usage }}%</h1>
-          <h1 v-else-if="cpu.usage < 75" class="text-2xl text-green-400">{{ cpu.usage }}%</h1>
-          <h1 v-else-if="cpu.usage < 90" class="text-2xl text-yellow-400">{{ cpu.usage }}%</h1>
-          <h1 v-else class="text-2xl text-red-400">{{ cpu.usage }}%</h1>
+          <p class="text-sm text-subtext1">CPU</p>
+          <h1 v-if="!cpu.usage" class="text-2xl text-subtext1">{{ cpu.usage }}%</h1>
+          <h1 v-else-if="cpu.usage < 75" class="text-2xl text-green">{{ cpu.usage }}%</h1>
+          <h1 v-else-if="cpu.usage < 90" class="text-2xl text-yellow">{{ cpu.usage }}%</h1>
+          <h1 v-else class="text-2xl text-red">{{ cpu.usage }}%</h1>
         </div>
         <div class="flex flex-col items-center">
-          <p class="text-sm text-gray-400">RAM</p>
-          <h1 v-if="!ram.usage" class="text-2xl text-gray-400">{{ ram.usage }}%</h1>
-          <h1 v-else-if="ram.usage < 80" class="text-2xl text-green-400">{{ ram.usage }}%</h1>
-          <h1 v-else-if="ram.usage < 90" class="text-2xl text-yellow-400">{{ ram.usage }}%</h1>
-          <h1 v-else class="text-2xl text-red-400">{{ ram.usage }} %</h1>
+          <p class="text-sm text-subtext1">RAM</p>
+          <h1 v-if="!ram.usage" class="text-2xl text-subtext1">{{ ram.usage }}%</h1>
+          <h1 v-else-if="ram.usage < 80" class="text-2xl text-green">{{ ram.usage }}%</h1>
+          <h1 v-else-if="ram.usage < 90" class="text-2xl text-yellow">{{ ram.usage }}%</h1>
+          <h1 v-else class="text-2xl text-red">{{ ram.usage }} %</h1>
         </div>
       </div>
     </div>

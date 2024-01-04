@@ -6,17 +6,29 @@
   @apply transition-all duration-200 ease-in-out opacity-0 translate-y-full;
 }
 
+.text-gradient {
+  @apply text-transparent bg-clip-text bg-gradient-to-br;
+}
+
+.nice {
+  @apply opacity-95 from-mauve to-green hover:opacity-100 hover:from-teal hover:to-yellow transition-all duration-200 ease-in-out;
+}
+
 i.skill {
-  @apply text-5xl text-center text-gray-300 hover:scale-75;
+  @apply text-5xl text-center;
+}
+
+h1.misc {
+  @apply text-2xl transition-all duration-500 ease-in-out;
 }
 
 div.card {
   @apply inline-block w-full mb-4 border rounded-lg p-4 h-fit transition-all duration-300 ease-in-out hover:shadow-lg;
-  @apply border-cyan-900 hover:border-cyan-400 bg-slate-900 hover:shadow-gray-700
+  @apply border-surface1 hover:border-surface2 bg-base hover:shadow-surface0;
 }
 
 body {
-  @apply bg-slate-950 text-white
+  @apply text-text bg-gradient-to-br from-crust to-mantle;
 }
 
 canvas {
@@ -28,7 +40,7 @@ i {
 }
 
 a:not(.nostyle) {
-  @apply text-blue-500 underline hover:text-blue-200 transition-all duration-500 ease-in-out;
+  @apply text-sapphire underline hover:text-teal transition-all duration-500 ease-in-out;
 }
 
 h1 {
@@ -40,5 +52,5 @@ ul {
 }
 
 li {
-  @apply text-gray-400;
+  @apply text-subtext1;
 }

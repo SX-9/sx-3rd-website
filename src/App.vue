@@ -46,7 +46,7 @@ export default {
 <template>
   <Gaza v-if="!hideBanner" />
   <div class="flex justify-center items-center flex-col p-12 pb-8">
-    <h1 class="text-cyan-100 text-xl text-center">
+    <h1 class="text-gradient from-green via-sapphire to-mauve text-xl text-center">
       Welcome to my little corner of the internet!
     </h1>
     <div class="flex gap-4 mt-2">
@@ -66,7 +66,7 @@ export default {
     <Status />
     <Repos />
   </div>
-  <p class="m-8 text-center text-gray-400">
+  <p class="m-8 text-center text-subtext1">
     	&#169; {{ new Date().getFullYear() }} Satria - All Rights Reserved
   </p>
 </template>

@@ -49,13 +49,13 @@ export default {
         <h1><i class="fa-brands fa-github"></i> Repositories</h1>
         <div class="flex flex-col gap-2 p-2">
             <div v-for="(repo, i) in repositories">
-                <hr size="1" class="pb-2 border-gray-500" v-if="i">
+                <hr size="1" class="pb-2 border-subtext0" v-if="i">
                 <div class="flex flex-row justify-between items-center">
                     <h2 class="text-xl"><a target="_blank" :href="repo.link">{{ repo.name }}</a></h2>
-                    <p class="text-yellow-300"><i class="fa-solid fa-star"></i> {{ repo.stars }}</p>
+                    <p class="text-yellow"><i class="fa-solid fa-star"></i> {{ repo.stars }}</p>
                 </div>
-                <p class="text-gray-400" v-if="repo.description">{{ repo.description }}</p>
-                <p class="text-gray-500 italic" v-else>No Description</p>
+                <p class="text-subtext1" v-if="repo.description">{{ repo.description }}</p>
+                <p class="text-subtext0 italic" v-else>No Description</p>
             </div>
         </div>
         <a target="_blank" href="https://github.com/SX-9?tab=repositories">More...</a>

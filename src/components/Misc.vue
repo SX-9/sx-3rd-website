@@ -33,10 +33,10 @@ export default {
   <div class="card b4">
     <h1><i class="fa-solid fa-feather-pointed"></i> Miscellaneous</h1>
     <div class="p-2 gap-2">
-      <h1 class="text-2xl text-cyan-200 hover:text-yellow-200 transition-all duration-500 ease-in-out">{{ days || 'Today' }}</h1>
-      <p class="text-gray-300">{{ days ? 'day' + (days === 1 ? '' : 's') + ' until birthday.' : 'is  my birthday!' }}</p>
-      <h1 class="text-2xl text-cyan-200 hover:text-yellow-200 transition-all duration-500 ease-in-out">{{ getTimeIn(timezone) }}</h1>
-      <p class="text-gray-300">for me in {{ timezone }}.</p>
+      <h1 class="misc text-gradient nice">{{ days || 'Today' }}</h1>
+      <p class="text-subtext1">{{ days ? 'day' + (days === 1 ? '' : 's') + ' until birthday.' : 'is  my birthday!' }}</p>
+      <h1 class="misc text-gradient nice">{{ getTimeIn(timezone) }}</h1>
+      <p class="text-subtext1">for me in {{ timezone }}.</p>
     </div>
   </div>
 </template>
