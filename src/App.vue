@@ -56,11 +56,11 @@ export default {
   </div>
   <div class="p-4 columns-1 sm:columns-2 lg:columns-3 xl:columns-4">
     <Intro />
-    <Misc />
-    <Skills />
-    <Status />
     <Server />
+    <Skills />
     <Links />
+    <Misc />
+    <Status />
     <Repos />
   </div>
   <p class="m-8 text-center text-gray-400">
