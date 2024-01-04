@@ -56,6 +56,7 @@ export default {
         <a target="_blank" href="mailto:hello@mail.sx9.is-a.dev"><i class="fa-solid fa-envelope"></i></a>
         <a target="_blank" href="https://github.com/SX-9"><i class="fa-brands fa-github"></i></a>
         <a target="_blank" href="https://discord.com/users/882595027132493864"><i class="fa-brands fa-discord"></i></a>
+        <a target="_blank" href="https://donate.unrwa.org/"><i class="fa-solid fa-hand-holding-dollar"></i></a>
       </div>
     </div>
   </div>
