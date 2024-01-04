@@ -10,10 +10,6 @@ i.skill {
   @apply text-5xl text-center text-gray-300 hover:scale-75;
 }
 
-div.container {
-  @apply ml-5 mt-1;
-}
-
 div.card {
   @apply inline-block w-full mb-4 border rounded-lg p-4 h-fit transition-all duration-300 ease-in-out hover:shadow-lg;
   @apply border-cyan-900 hover:border-cyan-400 bg-slate-900 hover:shadow-gray-700
