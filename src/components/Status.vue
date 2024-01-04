@@ -36,6 +36,10 @@ export default {
                 return Math.floor(interval) + " minutes ago";
             }
             return Math.floor(seconds) + " seconds ago";
+        },
+        async updateStatus() {
+            this.user.data.discord_user.username = "...";
+            this.user = await getDiscordUserDataAndStatus("882595027132493864");
         }
     },
     data() {
@@ -51,8 +55,8 @@ export default {
             }
         };
     },
-    async created() {
-        this.user = await getDiscordUserDataAndStatus("882595027132493864");
+    mounted() {
+        this.updateStatus();
     }
 };
 </script>
@@ -64,7 +68,7 @@ export default {
             <div class="flex gap-2 h-12">
                 <img v-if="user.data.discord_user.avatar" :src="`https://cdn.discordapp.com/avatars/${user.data.discord_user.id}/${user.data.discord_user.avatar}.png?size=128`" class="border border-white border-solid rounded-full h-12">
                 <div>
-                    <h2 class="text-lg font-bold">{{ user.data.discord_user.username }}</h2>
+                    <h2 class="text-lg font-bold">{{ user.data.discord_user.username }} <i @click="updateStatus()" class="fas fa-sync text-gray-500 text-sm cursor-pointer"></i></h2>
                     <p v-if="user.data.discord_status === 'offline'" class="animate-pulse text-md text-gray-400"><i class="fa-solid fa-circle"></i> Offline</p>
                     <p v-if="user.data.discord_status === 'online'" class="animate-pulse text-md text-green-400"><i class="fa-solid fa-circle"></i> Online</p>
                     <p v-if="user.data.discord_status === 'dnd'" class="animate-pulse text-md text-red-400"><i class="fa-solid fa-circle"></i> Do Not Disturb</p>
