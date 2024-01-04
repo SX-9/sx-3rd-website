@@ -85,9 +85,9 @@ export default {
                 <div v-for="activity in user.data.activities.filter(a=>a.type===0)">
                     <p class="text-gray-400">Playing <span class="font-bold">{{ activity.name }}</span></p>
                     <ul class="container">
-                        <li>Started <span class="font-bold">{{ timeAgo(activity.created_at) }}</span></li>
-                        <li>{{ activity.state }}</li>
-                        <li>{{ activity.details }}</li>
+                        <li v-if="activity.created_at">Started <span class="font-bold">{{ timeAgo(activity.created_at) }}</span></li>
+                        <li v-if="activity.state">{{ activity.state }}</li>
+                        <li v-if="activity.details">{{ activity.details }}</li>
                     </ul>
                 </div>
             </div>
