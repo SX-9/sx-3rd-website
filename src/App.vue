@@ -63,12 +63,13 @@ export default {
       Welcome to my little corner of the internet!
     </h1>
     <div class="flex gap-4 mt-2">
-      <a target="_blank" href="https://github.com/SX-9/sx-3rd-website"><i class="fa-solid fa-code"></i></a>
-      <a target="_blank" href="mailto:hello@mail.sx9.is-a.dev"><i class="fa-solid fa-envelope"></i></a>
-      <a target="_blank" href="https://github.com/SX-9"><i class="fa-brands fa-github"></i></a>
-      <a target="_blank" href="https://discord.com/users/882595027132493864"><i class="fa-brands fa-discord"></i></a>
-      <a target="_blank" href="https://donate.unrwa.org/"><i class="fa-solid fa-hand-holding-dollar"></i></a>
-      <a><i @click="switchTheme()" class="fa-solid fa-paint-roller"></i></a>
+      <a class="nostyle text-green" target="_blank" href="mailto:hello@mail.sx9.is-a.dev"><i class="fa-solid fa-envelope"></i></a>
+      <a class="nostyle text-green" target="_blank" href="https://github.com/SX-9"><i class="fa-brands fa-github"></i></a>
+      <a class="nostyle text-green" target="_blank" href="https://discord.com/users/882595027132493864"><i class="fa-brands fa-discord"></i></a>
+      <hr class="border-sapphire w-4 mt-3" size="1">
+      <a class="nostyle text-mauve" target="_blank" href="https://github.com/SX-9/sx-3rd-website"><i class="fa-solid fa-code"></i></a>
+      <a class="nostyle text-mauve" target="_blank" href="https://donate.unrwa.org/"><i class="fa-solid fa-hand-holding-dollar"></i></a>
+      <a class="nostyle text-mauve"><i @click="switchTheme()" class="fa-solid fa-paint-roller"></i></a>
     </div>
   </div>
   <div class="p-4 columns-1 sm:columns-2 lg:columns-3 xl:columns-4">
