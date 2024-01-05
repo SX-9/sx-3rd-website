@@ -27,7 +27,7 @@ div.card {
   @apply border-surface1 hover:border-surface2 bg-base hover:shadow-surface0;
 }
 
-div.card * {
+div.card *:not(i) {
   @apply transition-none;
 }
 
@@ -39,7 +39,7 @@ canvas {
   @apply absolute -z-10;
 }
 
-i {
+i:not(.skill) {
   @apply hover:rotate-12 transition-all duration-200 ease-in-out;
 }
 
