@@ -17,7 +17,6 @@ export default {
         {
           login: "Loading...",
           description: "Fetching data...",
-          url: "javascript:void(0)",
           avatar_url: "https://avatars.githubusercontent.com/u/882595027132493864?v=4"
         },
       ],
@@ -39,7 +38,7 @@ export default {
           <div class="flex gap-2">
             <img class="h-16 rounded-md" :src="org.avatar_url">
             <div>
-              <h2 class="text-xl"><a :href="org.url">{{ org.login }}</a></h2>
+              <h2 class="text-xl"><a target="_blank" :href="'https://github.com/' + org.login">{{ org.login }}</a></h2>
               <p class="text-subtext1 text-sm" v-if="org.description">{{ org.description }}</p>
             </div>
           </div>
