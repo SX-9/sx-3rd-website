@@ -12,6 +12,7 @@ import Gaza from "./components/Gaza.vue";
 import Server from "./components/Server.vue";
 import Misc from "./components/Misc.vue";
 import Links from "./components/Links.vue";
+import Orgs from "./components/Orgs.vue";
 </script>
 
 <script>
@@ -75,9 +76,10 @@ export default {
   <div class="p-4 columns-1 sm:columns-2 lg:columns-3 xl:columns-4">
     <Intro />
     <Server />
+    <Misc />
+    <Orgs />
     <Skills />
     <Links />
-    <Misc />
     <Status />
     <Repos />
   </div>
