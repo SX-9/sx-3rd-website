@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404</title>
+    <style>
+        * {
+            text-align: center;
+            color-scheme: dark;
+            font-family: monospace;
+        }
+        
+        div#bg {
+            z-index: -3;
+            color: #363636;
+            text-shadow: 0 0 10px #303030;
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div#i1 {
+            position: absolute;
+            width: 45px;
+            height: 45px;
+            border: 3px solid #ffffff;
+            background-color: black;
+            border-radius: .5em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div#i2 {
+            z-index: -1;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #808080;
+            border-radius: .5em;
+            filter: blur(5px);
+        }
+
+        div#i3 {
+            z-index: -2;
+            position: absolute;
+            width: 45px;
+            height: 45px;
+            margin: 5px;
+            background-color: #ff9900a6;
+            border-radius: .5em;
+            filter: blur(7.5px);
+        }
+
+        span {
+            color: #00dd00;
+            font-size: 1.5em;
+            transform: rotate(90deg);
+        }
+
+        h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        p {
+            font-size: 1.5em;
+            margin: 0;
+            font-weight: 700;
+        }
+
+        button {
+            all: unset;
+            display: none;
+        }
+
+        body {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            height: 100vh;
+            margin: 0;
+            cursor: none;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body
+    onbeforecopy = "return false"
+    ondragstart = "return false" 
+    onselectstart = "return false" 
+    oncontextmenu = "return false" 
+    onselect = "document.selection.empty()" 
+    oncopy = "document.selection.empty()">
+    <div id="bg">
+        <h1>404 Not Found</h1>
+        <p>Heres Billy instead!</p>
+    </div>
+    <div id="i1" class="blocks">
+        <span class="rand">:)</span>
+        <img class="rand" src="https://gifdb.com/images/featured/rick-roll-h2d7puir23see4lq.gif" width="45" height="45">
+    </div>
+    <div id="i2" class="blocks"></div>
+    <div id="i3" class="blocks"></div>
+    <button></button>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+
+        const delay = 1500, [size, trail, offset, rarity, corner, properties] = [
+            55, 35, 25, params.get('rarity') * 1000 || 1000 * 60 * 5, params.get('corner') !== "never",
+            { duration: delay, fill: 'forwards' }
+        ];
+
+        const 
+            tof = () => !!Math.round(Math.random()),
+            rand = (min, max) => Math.round(min + Math.random() * (max - min));
+
+        const div = [
+            null,
+            ...document.querySelectorAll('.blocks'),
+        ];
+
+        const contents = document.querySelectorAll('.rand');
+
+        let [ width, height ] = [
+            window.innerWidth - size,
+            window.innerHeight - size,
+        ],
+            topPos = rand(0, height) + 'px',
+            leftPos = rand(0, width) + 'px';
+
+        contents[1].style.display = 'none';
+        document.body.onclick = () => document.querySelector('button').focus();
+        document.addEventListener('contextmenu', event => event.preventDefault());
+
+        window.addEventListener('resize', () => {
+            width = window.innerWidth - size;
+            height = window.innerHeight - size;
+        });
+
+        div.forEach((e, i) => {
+            if (i === 0) return;
+            e.style.top = topPos;
+            e.style.left = leftPos;
+        });
+
+
+        let last;
+        setInterval(move, delay);
+        move();
+
+        setTimeout(() => {
+            show(true);
+            setTimeout(() => {
+                show(false);
+            }, 5000);
+        }, rand(0, rarity));
+
+        function show(bool) {
+            if (bool) {
+                contents[0].style.display = 'none';
+                contents[1].style.display = 'block';
+            } else {
+                contents[0].style.display = 'block';
+                contents[1].style.display = 'none';
+            }
+        }
+
+        function move() {
+            let min = corner ? 0 : offset;
+            if (tof()) {
+                let 
+                    tob = tof() ? 0 : height,
+                    max = corner ? width : width - offset,
+                    randVal = rand(min, max);
+                while (last === tob) {
+                    tob = tof() ? 0 : height;
+                };
+                last = tob;
+                div.forEach((e, i) => {
+                    if (i === 0) return;
+                    setTimeout(() => e.animate({
+                        top: tob + 'px',
+                        left: randVal + 'px',
+                    }, properties), (i-1) * trail);
+                });
+            } else {
+                let 
+                    lor = tof() ? 0 : width,
+                    max = corner ? height : height - offset,
+                    randVal = rand(min, max);
+                while (last === lor) {
+                    lor = tof() ? 0 : width;
+                };
+                last = lor;
+                div.forEach((e, i) => {
+                    if (i === 0) return;
+                    setTimeout(() => e.animate({
+                        top: randVal + 'px',
+                        left: lor + 'px',
+                    }, properties), (i-1) * trail);
+                });
+            }
+        }
+    </script>
+</body>
+</html>
