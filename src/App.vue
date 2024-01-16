@@ -3,18 +3,6 @@
   this project is using tailwind css 
 -->
 
-<script setup>
-import Intro from "./components/Intro.vue";
-import Repos from "./components/Repos.vue";
-import Status from "./components/Status.vue";
-import Skills from "./components/Skills.vue";
-import Gaza from "./components/Gaza.vue";
-import Server from "./components/Server.vue";
-import Misc from "./components/Misc.vue";
-import Links from "./components/Links.vue";
-import Orgs from "./components/Orgs.vue";
-</script>
-
 <script>
 export default {
   data() {
