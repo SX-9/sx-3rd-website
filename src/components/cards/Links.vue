@@ -12,7 +12,7 @@ export default {
           url: 'https://github.com/SX-9/term-port',
         },
         {
-          name: 'Web.SH',
+          name: 'Web.SH Dashboard',
           url: 'https://sx-9.github.io/web.sh-client/',
         },
         {
@@ -24,8 +24,8 @@ export default {
           url: 'https://sx-9.github.io/dvd-bounce/',
         },
         {
-          name: 'X! Programming Language',
-          url: 'https://sx-9.github.io/xbang-lang/',
+          name: 'File Downloads',
+          url: 'https://homeserver.axolotl-chameleon.ts.net/files',
         },
       ]
     }
