@@ -65,7 +65,6 @@ export default {
     <Intro />
     <Server />
     <Misc />
-    <Orgs />
     <Skills />
     <Links />
     <Status />
