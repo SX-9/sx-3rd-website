@@ -23,7 +23,7 @@ h1.misc {
 }
 
 div.card {
-  @apply inline-block w-full mb-4 border rounded-lg p-4 h-fit transition-all duration-300 ease-in-out hover:shadow-lg hover:sm:scale-105;
+  @apply inline-block w-full mb-4 border rounded-lg p-4 h-fit transition-all duration-300 ease-in-out hover:shadow-lg;
   @apply border-surface1 hover:sm:border-blue bg-base hover:sm:shadow-surface0;
 }
 
