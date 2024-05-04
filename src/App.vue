@@ -67,6 +67,7 @@ export default {
     <Skills />
     <Links />
     <Status />
+    <Rating />
     <Repos />
   </div>
   <p class="m-8 text-center text-subtext1">
