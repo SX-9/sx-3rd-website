@@ -11,7 +11,6 @@ export default {
     }
   },
   mounted() {
-    // set theme
     const theme = localStorage.getItem("theme");
     if (theme) this.switchTheme(theme);
     let b4s = document.querySelectorAll('.b4');
