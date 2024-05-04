@@ -51,7 +51,7 @@ export default {
       Welcome to my little corner of the internet!
     </h1>
     <div class="flex gap-4 mt-2">
-      <a class="nostyle text-green" target="_blank" href="mailto:hello@sx-91@outlook.com"><i class="fa-solid fa-envelope"></i></a>
+      <a class="nostyle text-green" target="_blank" href="mailto:sx-91@outlook.com"><i class="fa-solid fa-envelope"></i></a>
       <a class="nostyle text-green" target="_blank" href="https://github.com/SX-9"><i class="fa-brands fa-github"></i></a>
       <a class="nostyle text-green" target="_blank" href="https://discord.com/users/882595027132493864"><i class="fa-brands fa-discord"></i></a>
       <hr class="border-sapphire w-4 mt-3" size="1">
@@ -64,7 +64,6 @@ export default {
     <Intro />
     <Server />
     <Misc />
-    <Orgs />
     <Skills />
     <Links />
     <Status />
