@@ -63,7 +63,6 @@ export default {
 
 <template>
   <div class="card b4">
-    <h1><i class="fa-solid fa-chart-line"></i> Server</h1>
     <div class="p-2 gap-2">
       <p v-if="!uptime" class="text-red animate-pulse cursor-pointer" @click="start"><i class="fa-solid fa-circle"></i> Offline ({{ msg }})</p>
       <p v-else class="text-green animate-pulse"><i class="fa-solid fa-circle"></i> {{ formatTime(uptime) }}</p>

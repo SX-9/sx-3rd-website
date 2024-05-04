@@ -35,7 +35,6 @@ export default {
 
 <template>
   <div class="card b4">
-    <h1><i class="fa-solid fa-link"></i> Links</h1>
     <div class="p-2 gap-2">
       <ul>
         <li v-for="link in links">

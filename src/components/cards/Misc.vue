@@ -31,7 +31,6 @@ export default {
 
 <template>
   <div class="card b4">
-    <h1><i class="fa-solid fa-feather-pointed"></i> Miscellaneous</h1>
     <div class="p-2 gap-2">
       <h1 class="misc text-gradient nice">{{ days || 'Today' }}</h1>
       <p class="text-subtext1">{{ days ? 'day' + (days === 1 ? '' : 's') + ' until birthday.' : 'is  my birthday!' }}</p>

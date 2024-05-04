@@ -30,7 +30,6 @@ export default {
 
 <template>
   <div class="card b4">
-    <h1><i class="fa-solid fa-sitemap"></i> Organizations</h1>
     <div class="p-2 gap-2">
       <div class="flex flex-col gap-4 p-2">
         <div v-for="(org, i) in orgs">

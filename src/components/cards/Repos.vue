@@ -46,8 +46,7 @@ export default {
 
 <template>
     <div class="card b4">
-        <h1><i class="fa-brands fa-github"></i> Repositories</h1>
-        <div class="flex flex-col gap-2 p-2">
+        <div class="flex flex-col gap-2">
             <div v-for="(repo, i) in repositories">
                 <hr size="1" class="pb-2 border-subtext0" v-if="i">
                 <div class="flex flex-row justify-between items-center">
@@ -58,6 +57,6 @@ export default {
                 <p class="text-subtext0 italic" v-else>No Description</p>
             </div>
         </div>
-        <a target="_blank" href="https://github.com/SX-9?tab=repositories">More...</a>
+        <a target="_blank" href="https://github.com/SX-9?tab=repositories"><i class="fa-brands fa-github"></i> More...</a>
     </div>
 </template>

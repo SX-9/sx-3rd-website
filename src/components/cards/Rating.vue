@@ -23,7 +23,6 @@ export default {
 
 <template>
   <div class="card b4">
-    <h1><i class="fa-solid fa-chess"></i> Rating</h1>
     <div class="p-2 gap-2">
       <div v-if="!this.apiResponse?.message">
         <div class="grid grid-cols-3 gap-0 w-full mb-4 mt-2">

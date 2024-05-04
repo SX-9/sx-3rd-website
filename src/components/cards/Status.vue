@@ -63,16 +63,15 @@ export default {
 
 <template>
     <div class="card b4">
-        <h1><i class="fa-brands fa-discord"></i> Status</h1>
         <div class="p-2">
             <div class="flex gap-2 h-12">
                 <img v-if="user.data.discord_user.avatar" :src="`https://cdn.discordapp.com/avatars/${user.data.discord_user.id}/${user.data.discord_user.avatar}.png?size=128`" class="border border-white border-solid rounded-full h-12">
                 <div>
                     <h2 class="text-lg font-bold">{{ user.data.discord_user.username }} <i @click="updateStatus()" class="fas fa-sync text-subtext0 text-sm cursor-pointer"></i></h2>
-                    <p v-if="user.data.discord_status === 'offline'" class="animate-pulse text-md text-subtext1"><i class="fa-solid fa-circle"></i> Offline</p>
-                    <p v-if="user.data.discord_status === 'online'" class="animate-pulse text-md text-green"><i class="fa-solid fa-circle"></i> Online</p>
-                    <p v-if="user.data.discord_status === 'dnd'" class="animate-pulse text-md text-red"><i class="fa-solid fa-circle"></i> Do Not Disturb</p>
-                    <p v-if="user.data.discord_status === 'idle'" class="animate-pulse text-md text-yellow"><i class="fa-solid fa-circle"></i> Idle</p>
+                    <p v-if="user.data.discord_status === 'offline'" class="animate-pulse text-md text-subtext1"><i class="fa-brands fa-discord"></i> Offline</p>
+                    <p v-if="user.data.discord_status === 'online'" class="animate-pulse text-md text-green"><i class="fa-brands fa-discord"></i> Online</p>
+                    <p v-if="user.data.discord_status === 'dnd'" class="animate-pulse text-md text-red"><i class="fa-brands fa-discord"></i> Do Not Disturb</p>
+                    <p v-if="user.data.discord_status === 'idle'" class="animate-pulse text-md text-yellow"><i class="fa-brands fa-discord"></i> Idle</p>
                 </div>
             </div>
             <div class="p-2 gap-3 flex flex-col">

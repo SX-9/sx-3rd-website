@@ -11,7 +11,6 @@ export default {
 
 <template>
   <div class="card b4">
-    <h1><i class="fa-solid fa-circle-user"></i> Introduction</h1>
     <div class="p-2">
       <p>{{ description }}</p>
     </div>

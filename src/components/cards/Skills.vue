@@ -12,7 +12,6 @@ export default {
 
 <template>
     <div class="card b4">
-        <h1><i class="fa-solid fa-wrench"></i> Skills</h1>
         <div class="p-2 mt-3 grid grid-cols-3 gap-8">
             <i v-for="skill in skills" :class="'skill text-gradient nice fa-brands fa-' + skill"></i>
         </div>
