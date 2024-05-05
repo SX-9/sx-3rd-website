@@ -62,10 +62,10 @@ export default {
   </div>
   <div class="p-4 columns-1 sm:columns-2 lg:columns-3 xl:columns-4">
     <Intro />
-    <Server />
-    <Misc />
     <Skills />
+    <Misc />
     <Links />
+    <Server />
     <Status />
     <Rating />
     <Repos />
