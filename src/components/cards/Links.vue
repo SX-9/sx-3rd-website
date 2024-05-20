@@ -4,10 +4,6 @@ export default {
     return {
       links: [
         {
-          name: 'Pinned Repos API',
-          url: 'https://gh-get-pinned.cyclic.app/',
-        },
-        {
           name: 'Terminal Portfolio',
           url: 'https://github.com/SX-9/term-port',
         },
@@ -22,10 +18,6 @@ export default {
         {
           name: 'DVD Logo Bounce',
           url: 'https://sx-9.github.io/dvd-bounce/',
-        },
-        {
-          name: 'File Downloads',
-          url: 'https://homeserver.axolotl-chameleon.ts.net/files',
         },
       ]
     }
