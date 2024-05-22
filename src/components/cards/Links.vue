@@ -19,6 +19,10 @@ export default {
           name: 'DVD Logo Bounce',
           url: 'https://sx-9.github.io/dvd-bounce/',
         },
+        {
+          name: 'Chess from scratch',
+          url: 'https://sx-9.github.io/chess-from-scratch/',
+        },
       ]
     }
   }
