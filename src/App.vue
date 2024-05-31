@@ -26,9 +26,9 @@ export default {
         particlesPerFrame: 1,
       });
       this.$confetti.start();
-      setTimeout(() => {
-        this.$confetti.stop();
-      }, window.innerHeight * 5);
+      // setTimeout(() => {
+      //   this.$confetti.stop();
+      // }, window.innerHeight * 5);
     });
   },
   methods: {
