@@ -3,7 +3,7 @@ export default {
   data() {
     return {
         skills: [
-            "js", "vuejs", "html5", "css3-alt", "linux", "square-git", "docker", "python", "golang"
+            "js", "html5", "css3-alt", "linux", "square-git", "docker", "vuejs", "python", "golang"
         ]
     }
   }
