@@ -66,7 +66,7 @@ export default {
     <div class="p-2 gap-2">
       <p v-if="!uptime" class="text-red animate-pulse cursor-pointer" @click="start"><i class="fa-solid fa-circle"></i> Offline ({{ msg }})</p>
       <p v-else class="text-green animate-pulse"><i class="fa-solid fa-circle"></i> {{ formatTime(uptime) }}</p>
-      <div>
+      <div v-if="uptime">
         <p class="text-subtext1">{{ model }}</p>
         <ul>
           <li>{{ cpu.model }}</li>
