@@ -22,7 +22,7 @@ export default {
     }
   },
   mounted() {
-    if (this.days === 0) {
+    if (this.days <= 3) {
       this.emitter.emit('birthday');
     }
   },
